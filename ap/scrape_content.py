@@ -32,15 +32,6 @@ def extract_article_text(article_url):
             paragraph_text = re.sub(r'\s([.,!?])', r'\1', paragraph_text)
             text_blocks.append(paragraph_text.strip())
 
-    # Author info is buggy, come back to it
-    #
-    # author_info = soup.find('div', class_='Page-authorInfo')
-    # if author_info is not None:
-    #     author_name = author_info.find('div', class_='Author-name').get_text(strip=True)
-    #     author_bio = author_info.find('div', class_='Author-bio').get_text(strip=True)
-    #     text_blocks.append(f"\nAuthor: {author_name}")
-    #     text_blocks.append(f"Bio: {author_bio}")
-
     # Honor newline characters (separate paragraphs) by joining the text blocks with two newlines
     return "\n\n".join(text_blocks)
 

@@ -1,4 +1,5 @@
 # process_messages.py
+# Handle the processing of received messages
 
 import os
 from redis_client import RedisClient

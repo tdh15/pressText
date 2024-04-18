@@ -10,17 +10,6 @@ import logging
 
 from process_messages import intake_message, process_send_queue
 
-# from get_fresh_articles_and_send_to_users import get_fresh_articles_and_send_to_users
-
-# For sending articles once daily
-# from apscheduler.schedulers.background import BackgroundScheduler
-
-# def schedule_daily_tasks():
-#     scheduler = BackgroundScheduler()
-#     # Schedule send_articles_to_users to run daily at a specific time
-#     scheduler.add_job(get_fresh_articles_and_send_to_users, 'cron', hour=5, minute=16)
-#     scheduler.start()
-
 # The session object makes use of a secret key.
 SECRET_KEY = 'a secret key'
 app = Flask(__name__)

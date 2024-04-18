@@ -1,4 +1,6 @@
 # handle_states.py
+# Take in the user's previous state and their most recent text and return
+# the appropriate response and their new state.
 
 import json
 import txt_config
@@ -97,27 +99,6 @@ def s_011(body, session_value, user):
         # Get the user's tree
         compressed_tree = user.tree
         tree = zlib.decompress(compressed_tree)
-
-        # REMOVED: getting previous messages - it was getting overwhelmed with context,
-        # a better solution would be to have an llm separarately taking in previous messages
-        # and the question and formatting the best possible raptor query
-        # 
-        # # Add previous two user messages and assistant responses (so previous 4 messages)
-        # # to the user_query
-        # db_session = TursoDBClient().get_session()
-        # previous_messages = db_session.query(Message).filter(Message.user_id == user.user_id).order_by(Message.timestamp.desc()).limit(4)
-        # user_query = "Previous messages:\n"
-        # # Need to flip the order of previous_messages so they get oldest to newest
-        # for message in previous_messages[::-1]:
-        #     # If it's a user message, preface it with "User: "
-        #     if message.sender == "user":
-        #         user_query += "User: " + message.body + "\n"
-        #     # If it's an assistant message, preface it with "Assistant: "
-        #     elif message.sender == "assistant":
-        #         user_query += "Assistant: " + message.body + "\n"
-        # db_session.close()
-# 
-        # user_query += "Current user message:\n" + body
 
         user_query = body
 
