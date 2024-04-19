@@ -11,9 +11,6 @@ from send_articles_to_users import get_article_one_liners, send_articles_to_user
 
 from raptor_ops import get_raptor_response
 
-from db.client import TursoDBClient
-from db.models import Article, Message
-
 # If they've never texted before and text "news", send them the intro message
 def s_000(body, session_value):
     print("handle_states.py: s_000()")
