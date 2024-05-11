@@ -8,6 +8,15 @@ pip install -r requirements.txt
 ```
 Note: you can skip the first two lines if the venv is already running.
 
+**Setting Environment Variables:**
+The following environment variables need to be set before execution.
+- `export OPENAI_API_KEY=""`
+- `export TURSO_DATABASE_URL=""`
+- `export TURSO_AUTH_TOKEN=""`
+- `export TWILIO_ACCOUNT_SID=""`
+- `export TWILIO_AUTH_TOKEN=""`
+- `export TWILIO_PHONE_NUMBER=""`
+
 **For Twilio and Redis connection (in development):**
 
 Ngrok lets us expose localhost publicly so that Twilio can use port 5000 as a Webhook URL.
