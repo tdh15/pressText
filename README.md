@@ -5,8 +5,6 @@ To engage with PressText, users first text “News” to a dedicated phone numbe
 
 For instructions on how to run the code yourself, see `running_instructions.md`.
 
-For the talk-through, see https://www.loom.com/share/55aadf1aa3cd4486b3d4e8ef67fbc68e?sid=91c1f56e-8430-44b7-9407-614d103a2aa5
-
 For the onboarding demo, see https://youtu.be/6iaOQavECfo
 
 For the paper, see https://drive.google.com/file/d/11AfG-0_asYCTSYVBdnRqjNnDpOzTIzpT/view?usp=sharing
